@@ -11,7 +11,7 @@
         <groupId>cn.home1</groupId>
         <version>0.1.3</version>
     </parent>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <!-- @formatter:off -->
     <dependencies>
@@ -43,7 +43,11 @@
                 <version>${testcontainers.version}</version>
             </dependency>
 
+            <!--<dependency><groupId>cn.home1</groupId><artifactId>logback-logstash-config</artifactId><version>${log-config.version}</version></dependency>-->
             <dependency><groupId>cn.home1</groupId><artifactId>logback-test-config</artifactId><version>${log-config.version}</version><scope>test</scope></dependency>
+
+            <dependency><groupId>top.infra</groupId><artifactId>spring-boot-commons</artifactId><version>${spring-boot-commons.version}</version></dependency>
+            <dependency><groupId>top.infra</groupId><artifactId>spring-boot-test-support</artifactId><version>${spring-boot-test-support.version}</version></dependency>
         </dependencies>
         <!-- @formatter:on -->
     </dependencyManagement>
@@ -52,6 +56,10 @@
         <deps-spring-boot.version>0.1.1</deps-spring-boot.version>
         <log-config.version>0.1.1</log-config.version>
         <spring-boot.version>1.5.12.RELEASE</spring-boot.version>
+
+        <spring-boot-commons.version>1.0.1-SNAPSHOT</spring-boot-commons.version>
+        <spring-boot-test-support.version>1.0.1-SNAPSHOT</spring-boot-test-support.version>
+
         <testcontainers.version>1.8.2</testcontainers.version>
     </properties>
 </project>
