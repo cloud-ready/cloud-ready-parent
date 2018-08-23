@@ -23,11 +23,11 @@ public final class InitializerCallbacks {
         "spring.redis.port=" + mappedPort
     );
     // spring-boot 2.0.x
-//      TestPropertyValues values = TestPropertyValues.of(
-//          "spring.redis.host=" + redis.getContainerIpAddress(),
-//          "spring.redis.port=" + redis.getMappedPort(6379)
-//      );
-//      values.applyTo(configurableApplicationContext);
+    //TestPropertyValues values = TestPropertyValues.of(
+    //    "spring.redis.host=" + redis.getContainerIpAddress(),
+    //    "spring.redis.port=" + redis.getMappedPort(6379)
+    //);
+    //values.applyTo(configurableApplicationContext);
 
     return null;
   };
