@@ -14,7 +14,8 @@ import java.util.function.BiFunction;
 
 public class GenericContainerInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
-  private static final Map<GenericContainer, BiFunction<GenericContainer, ConfigurableApplicationContext, Void>> containers = Maps.newLinkedHashMap();
+  private static final Map<GenericContainer, BiFunction<GenericContainer, ConfigurableApplicationContext, Void>> //
+      containers = Maps.newLinkedHashMap();
 
   public static void onInitialize(
       final GenericContainer container, //
