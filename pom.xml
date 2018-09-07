@@ -62,8 +62,8 @@
         <log-config.version>0.1.2</log-config.version>
         <spring-boot.version>1.5.12.RELEASE</spring-boot.version>
 
-        <spring-boot-commons.version>1.0.2-SNAPSHOT</spring-boot-commons.version>
-        <spring-boot-test-support.version>1.0.2-SNAPSHOT</spring-boot-test-support.version>
+        <spring-boot-commons.version>1.0.2</spring-boot-commons.version>
+        <spring-boot-test-support.version>1.0.2</spring-boot-test-support.version>
 
         <testcontainers.version>1.8.2</testcontainers.version>
     </properties>
