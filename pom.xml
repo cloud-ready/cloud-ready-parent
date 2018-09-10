@@ -7,9 +7,9 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <parent>
-        <artifactId>maven-build</artifactId>
+        <artifactId>build-docker</artifactId>
         <groupId>cn.home1</groupId>
-        <version>0.2.1</version>
+        <version>0.2.2</version>
     </parent>
     <version>1.0.2.U1</version>
 
@@ -62,8 +62,8 @@
         <log-config.version>0.1.2</log-config.version>
         <spring-boot.version>1.5.12.RELEASE</spring-boot.version>
 
-        <spring-boot-commons.version>1.0.2</spring-boot-commons.version>
-        <spring-boot-test-support.version>1.0.2</spring-boot-test-support.version>
+        <spring-boot-commons.version>1.0.2.U1</spring-boot-commons.version>
+        <spring-boot-test-support.version>1.0.2.U1</spring-boot-test-support.version>
 
         <testcontainers.version>1.8.2</testcontainers.version>
     </properties>
