@@ -10,7 +10,6 @@
         <groupId>top.infra</groupId>
         <version>1.0.3-SNAPSHOT</version>
     </parent>
-    <version>1.0.3-SNAPSHOT</version>
 
     <!-- @formatter:off -->
     <dependencies>

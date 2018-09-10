@@ -12,12 +12,12 @@ import java.util.function.BooleanSupplier;
 @Slf4j
 public final class TestUtils {
 
-  @SneakyThrows
-  public static void waitForCondition(final BooleanSupplier condition, final long thresholdMillis) {
-    final long start = System.currentTimeMillis();
-    while (!condition.getAsBoolean() && System.currentTimeMillis() - start < thresholdMillis) {
-      log.info("wait for condition");
-      Thread.sleep(thresholdMillis / 5);
+    @SneakyThrows
+    public static void waitForCondition(final BooleanSupplier condition, final long thresholdMillis) {
+        final long start = System.currentTimeMillis();
+        while (!condition.getAsBoolean() && System.currentTimeMillis() - start < thresholdMillis) {
+            log.info("wait for condition");
+            Thread.sleep(thresholdMillis / 5);
+        }
     }
-  }
 }
