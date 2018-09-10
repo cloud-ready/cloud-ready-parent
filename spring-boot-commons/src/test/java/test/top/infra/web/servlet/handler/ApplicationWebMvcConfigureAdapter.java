@@ -12,15 +12,15 @@ import top.infra.web.servlet.handler.OrderedHandlerInterceptorWebMvcConfigureAda
 @Configuration
 public class ApplicationWebMvcConfigureAdapter extends OrderedHandlerInterceptorWebMvcConfigureAdapter {
 
-  @Override
-  public List<OrderedHandlerInterceptor<?>> addOrderedInterceptors() {
-    final List<OrderedHandlerInterceptor<?>> interceptors = new ArrayList<>();
-    interceptors.add(new OrderedHandlerInterceptor<>(testInterceptor(), new String[]{"/**"}));
-    return interceptors;
-  }
+    @Override
+    public List<OrderedHandlerInterceptor<?>> addOrderedInterceptors() {
+        final List<OrderedHandlerInterceptor<?>> interceptors = new ArrayList<>();
+        interceptors.add(new OrderedHandlerInterceptor<>(testInterceptor(), new String[]{"/**"}));
+        return interceptors;
+    }
 
-  @Bean
-  public TestInterceptor testInterceptor() {
-    return new TestInterceptor();
-  }
+    @Bean
+    public TestInterceptor testInterceptor() {
+        return new TestInterceptor();
+    }
 }

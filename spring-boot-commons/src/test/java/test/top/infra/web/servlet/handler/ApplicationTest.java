@@ -20,31 +20,31 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class ApplicationTest {
 
-  @LocalServerPort
-  private int port;
+    @LocalServerPort
+    private int port;
 
-  @Autowired
-  private TestRestTemplate restTemplate;
+    @Autowired
+    private TestRestTemplate restTemplate;
 
-  @Autowired
-  private GreetingController controller;
+    @Autowired
+    private GreetingController controller;
 
-  @Autowired
-  private TestInterceptor testInterceptor;
+    @Autowired
+    private TestInterceptor testInterceptor;
 
-  @Test
-  public void contexLoads() throws Exception {
-    log.info("contexLoads");
-    assertThat(this.controller).isNotNull();
-  }
+    @Test
+    public void contexLoads() throws Exception {
+        log.info("contexLoads");
+        assertThat(this.controller).isNotNull();
+    }
 
-  @Test
-  public void greetingShouldReturnDefaultMessage() throws Exception {
-    assertThat(this.restTemplate.getForObject("http://localhost:" + this.port + "/",
-        String.class)).contains("Hello World");
+    @Test
+    public void greetingShouldReturnDefaultMessage() throws Exception {
+        assertThat(this.restTemplate.getForObject("http://localhost:" + this.port + "/",
+            String.class)).contains("Hello World");
 
-    final long thresholdMillis = TimeUnit.SECONDS.toMillis(5);
-    TestUtils.waitForCondition(() -> testInterceptor.getCount() >= 2, thresholdMillis);
-    assertThat(this.testInterceptor.getCount()).isEqualTo(2);
-  }
+        final long thresholdMillis = TimeUnit.SECONDS.toMillis(5);
+        TestUtils.waitForCondition(() -> testInterceptor.getCount() >= 2, thresholdMillis);
+        assertThat(this.testInterceptor.getCount()).isEqualTo(2);
+    }
 }
