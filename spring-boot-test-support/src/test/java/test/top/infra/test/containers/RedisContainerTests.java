@@ -26,38 +26,37 @@ import top.infra.test.containers.InitializerCallbacks;
 @ContextConfiguration(initializers = GenericContainerInitializer.class)
 public class RedisContainerTests {
 
-  @SpringBootApplication
-  public static class TestApplication {
+    @ClassRule
+    public static final GenericContainer redis = new GenericContainer("redis:3.0.2")
+        .withExposedPorts(6379);
 
-    public static void main(final String... args) {
-      SpringApplication.run(TestApplication.class, args);
+    static {
+        GenericContainerInitializer.onInitialize(redis, InitializerCallbacks.SPRING_DATA_REDIS);
     }
-  }
 
-  @ClassRule
-  public static final GenericContainer redis = new GenericContainer("redis:3.0.2")
-      .withExposedPorts(6379);
+    // inject the actual template
+    @Autowired
+    private RedisTemplate<String, String> template;
+    // inject the template as ListOperations
+    // can also inject as Value, Set, ZSet, and HashOperations
+    @Resource(name = "redisTemplate")
+    private ListOperations<String, String> listOps;
 
-  static {
-    GenericContainerInitializer.onInitialize(redis, InitializerCallbacks.SPRING_DATA_REDIS);
-  }
+    @Test
+    public void testRedisson() {
+        final String key = "key";
+        final String value = "value";
 
-  // inject the actual template
-  @Autowired
-  private RedisTemplate<String, String> template;
+        listOps.leftPush(key, value);
+        // or use template directly
+        this.template.boundListOps(key).leftPush(value);
+    }
 
-  // inject the template as ListOperations
-  // can also inject as Value, Set, ZSet, and HashOperations
-  @Resource(name = "redisTemplate")
-  private ListOperations<String, String> listOps;
+    @SpringBootApplication
+    public static class TestApplication {
 
-  @Test
-  public void testRedisson() {
-    final String key = "key";
-    final String value = "value";
-
-    listOps.leftPush(key, value);
-    // or use template directly
-    this.template.boundListOps(key).leftPush(value);
-  }
+        public static void main(final String... args) {
+            SpringApplication.run(TestApplication.class, args);
+        }
+    }
 }

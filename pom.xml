@@ -7,11 +7,11 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <parent>
-        <artifactId>maven-build</artifactId>
+        <artifactId>build-docker</artifactId>
         <groupId>cn.home1</groupId>
-        <version>0.2.1</version>
+        <version>0.2.2</version>
     </parent>
-    <version>1.0.2</version>
+    <version>2.0.0</version>
 
     <!-- @formatter:off -->
     <dependencies>
@@ -60,11 +60,25 @@
     <properties>
         <deps-spring-boot.version>0.1.6</deps-spring-boot.version>
         <log-config.version>0.1.2</log-config.version>
-        <spring-boot.version>1.5.12.RELEASE</spring-boot.version>
+        <spring-boot.version>2.0.3.RELEASE</spring-boot.version>
 
-        <spring-boot-commons.version>1.0.2</spring-boot-commons.version>
-        <spring-boot-test-support.version>1.0.2</spring-boot-test-support.version>
+        <spring-boot-commons.version>2.0.0</spring-boot-commons.version>
+        <spring-boot-test-support.version>2.0.0</spring-boot-test-support.version>
 
-        <testcontainers.version>1.8.2</testcontainers.version>
+        <testcontainers.version>1.8.3</testcontainers.version>
     </properties>
+
+    <!-- @formatter:off -->
+    <repositories>
+        <!-- Make artifacts in OSSRH repositories available -->
+        <repository>
+            <id>OSSRH-releases</id><name>central releases</name><url>https://oss.sonatype.org/content/repositories/releases/</url>
+            <releases><enabled>true</enabled></releases><snapshots><enabled>false</enabled></snapshots>
+        </repository>
+        <repository>
+            <id>OSSRH-snapshots</id><name>central snapshots</name><url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <releases><enabled>false</enabled></releases><snapshots><enabled>true</enabled></snapshots>
+        </repository>
+    </repositories>
+    <!-- @formatter:on -->
 </project>

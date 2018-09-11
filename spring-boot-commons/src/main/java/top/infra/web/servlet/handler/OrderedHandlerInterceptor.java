@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Collection;
 
 
 /**
@@ -18,13 +17,13 @@ import java.util.Collection;
 @AllArgsConstructor
 public class OrderedHandlerInterceptor<T extends OrderedHandlerInterceptorAdapter> implements Serializable {
 
-  /**
-   * ordered interceptor
-   */
-  private T interceptor;
+    /**
+     * ordered interceptor
+     */
+    private T interceptor;
 
-  /**
-   * Add URL patterns to which the registered interceptor should apply to.
-   */
-  private String[] patterns;
+    /**
+     * Add URL patterns to which the registered interceptor should apply to.
+     */
+    private String[] patterns;
 }

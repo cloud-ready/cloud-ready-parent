@@ -22,19 +22,19 @@ import java.util.concurrent.TimeUnit;
 @AutoConfigureMockMvc
 public class ApplicationMockTest {
 
-  @Autowired
-  private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-  @Autowired
-  private TestInterceptor testInterceptor;
+    @Autowired
+    private TestInterceptor testInterceptor;
 
-  @Test
-  public void shouldReturnDefaultMessage() throws Exception {
-    this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
-        .andExpect(content().string(containsString("Hello World")));
+    @Test
+    public void shouldReturnDefaultMessage() throws Exception {
+        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
+            .andExpect(content().string(containsString("Hello World")));
 
-    final long thresholdMillis = TimeUnit.SECONDS.toMillis(5);
-    TestUtils.waitForCondition(() -> testInterceptor.getCount() >= 2, thresholdMillis);
-    assertThat(this.testInterceptor.getCount()).isEqualTo(2);
-  }
+        final long thresholdMillis = TimeUnit.SECONDS.toMillis(5);
+        TestUtils.waitForCondition(() -> testInterceptor.getCount() >= 2, thresholdMillis);
+        assertThat(this.testInterceptor.getCount()).isEqualTo(2);
+    }
 }
