@@ -1,4 +1,4 @@
-# report-aggregate
+# cloud-ready-parent-report-aggregate
 
 see: [stackoverflow aggregate-findbugs-report-in-maven-3-0-5](https://stackoverflow.com/questions/34829200/aggregate-findbugs-report-in-maven-3-0-5)  
 
