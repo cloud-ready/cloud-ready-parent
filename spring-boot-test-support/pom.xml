@@ -8,9 +8,8 @@
     <parent>
         <artifactId>cloud-ready-parent</artifactId>
         <groupId>top.infra</groupId>
-        <version>1.0.2.U2</version>
+        <version>1.0.2.U3</version>
     </parent>
-    <version>1.0.2.U2</version>
 
     <!-- @formatter:off -->
     <dependencies>
