@@ -1,8 +1,8 @@
 # cloud-ready-parent
 
 [![Sonar](https://sonarcloud.io/api/project_badges/measure?project=top.infra%3Acloud-ready-parent&metric=alert_status)](https://sonarcloud.io/dashboard?id=top.infra%3Acloud-ready-parent)  
-[Maven Site (release)](https://cloud-ready.github.io/cloud-ready/release/cloud-ready-parent/index.html)  
-[Maven Site (snapshot)](https://cloud-ready.github.io/cloud-ready/snapshot/cloud-ready-parent/index.html)  
+[Maven Site (release)](https://cloud-ready.github.io/cloud-ready/release/build-docker/cloud-ready-parent/index.html)  
+[Maven Site (snapshot)](https://cloud-ready.github.io/cloud-ready/snapshot/build-docker/cloud-ready-parent/index.html)  
 <!--[Maven site (infra.top)](https://maven-site.infra.top/cloud-ready/snapshot/staging/cloud-ready-parent/index.html)  -->
 [Artifacts (release)](https://oss.sonatype.org/content/repositories/releases/top/infra/cloud-ready-parent/)  
 [Artifacts (snapshot)](https://oss.sonatype.org/content/repositories/snapshots/top/infra/cloud-ready-parent/)  
