@@ -79,10 +79,10 @@
     <profiles>
         <!-- @formatter:off -->
         <profile>
-            <id>report-aggregate</id>
+            <id>cloud-ready-parent-report-aggregate</id>
             <activation><property><name>site</name><value>true</value></property></activation>
             <modules>
-                <module>report-aggregate</module>
+                <module>cloud-ready-parent-report-aggregate</module>
                 <module>spring-boot-commons</module>
                 <module>spring-boot-test-support</module>
             </modules>
