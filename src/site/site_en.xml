@@ -33,9 +33,11 @@
         </menu>
         <menu ref="modules"/>
         <menu name="aggregated reports">
-            <item href="cloud-ready-parent-report-aggregate/jacoco-aggregate/index.html" name="aggregated jacoco report"/>
-            <item href="cloud-ready-parent-report-aggregate/findbugs.html" name="aggregated findbugs report"/>
-            <item href="cloud-ready-parent-report-aggregate/jdepend-report.html" name="aggregated jdepend report"/>
+            <item href="apidocs/index.html" name="Javadoc"/>
+            <item href="cloud-ready-parent-report-aggregate/jacoco-aggregate/index.html" name="JaCoCo"/>
+            <item href="cloud-ready-parent-report-aggregate/checkstyle.html" name="Checkstyle"/>
+            <item href="cloud-ready-parent-report-aggregate/findbugs.html" name="FindBugs"/>
+            <item href="cloud-ready-parent-report-aggregate/jdepend-report.html" name="JDepend"/>
         </menu>
         <!--<menu ref="reports" />-->
         <menu ref="reports" inherit="bottom"/>
