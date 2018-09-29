@@ -11,7 +11,7 @@
         <groupId>cn.home1</groupId>
         <version>0.3.5</version>
     </parent>
-    <version>1.0.2.U3</version>
+    <version>1.0.2.U4</version>
 
     <!-- @formatter:off -->
     <dependencies>
@@ -95,8 +95,8 @@
         <log-config.version>0.1.2</log-config.version>
         <spring-boot.version>1.5.12.RELEASE</spring-boot.version>
 
-        <spring-boot-commons.version>1.0.2.U3</spring-boot-commons.version>
-        <spring-boot-test-support.version>1.0.2.U3</spring-boot-test-support.version>
+        <spring-boot-commons.version>1.0.2.U4</spring-boot-commons.version>
+        <spring-boot-test-support.version>1.0.2.U4</spring-boot-test-support.version>
 
         <testcontainers.version>1.8.2</testcontainers.version>
     </properties>
