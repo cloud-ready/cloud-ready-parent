@@ -9,9 +9,9 @@
     <parent>
         <artifactId>build-docker</artifactId>
         <groupId>cn.home1</groupId>
-        <version>0.2.3</version>
+        <version>0.3.5</version>
     </parent>
-    <version>2.0.1</version>
+    <version>2.0.2</version>
 
     <!-- @formatter:off -->
     <dependencies>
@@ -21,7 +21,6 @@
         <dependency><groupId>org.projectlombok</groupId><artifactId>lombok</artifactId><scope>provided</scope></dependency>
 
         <dependency><groupId>cn.home1</groupId><artifactId>logback-test-config</artifactId><scope>test</scope></dependency>
-        <dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-test</artifactId><scope>test</scope></dependency>
     </dependencies>
     <!-- @formatter:on -->
 
@@ -52,18 +51,52 @@
         <!-- @formatter:on -->
     </dependencyManagement>
 
+    <developers>
+        <developer>
+            <name>Haolun Zhang</name>
+            <url>https://github.com/chshawkn</url>
+        </developer>
+    </developers>
+
+    <!-- For this to work, you must go to: Preferences->Editor->Code Style->Formatter Control and check Enable formatter markers in comments -->
+    <!-- @formatter:off -->
+    <ciManagement><system>Travis CI</system><url>https://travis-ci.org/cloud-ready/cloud-ready-parent</url></ciManagement>
+    <issueManagement><system>GitHub Issues</system><url>https://github.com/cloud-ready/cloud-ready-parent/issues</url></issueManagement>
+    <licenses><license><name>MIT License</name><url>http://www.opensource.org/licenses/mit-license.php</url><distribution>repo</distribution></license></licenses>
+    <scm>
+        <url>https://github.com/cloud-ready/cloud-ready-parent</url>
+        <connection>scm:git:https://github.com/cloud-ready/cloud-ready-parent.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/cloud-ready/cloud-ready-parent.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+    <!-- @formatter:on -->
+
     <modules>
         <module>spring-boot-commons</module>
         <module>spring-boot-test-support</module>
     </modules>
 
+    <profiles>
+        <!-- @formatter:off -->
+        <profile>
+            <id>cloud-ready-parent-report-aggregate</id>
+            <activation><property><name>site</name><value>true</value></property></activation>
+            <modules>
+                <module>cloud-ready-parent-report-aggregate</module>
+                <module>spring-boot-commons</module>
+                <module>spring-boot-test-support</module>
+            </modules>
+        </profile>
+        <!-- @formatter:on -->
+    </profiles>
+
     <properties>
-        <deps-spring-boot.version>0.1.7</deps-spring-boot.version>
+        <deps-spring-boot.version>0.2.2</deps-spring-boot.version>
         <log-config.version>0.1.2</log-config.version>
         <spring-boot.version>2.0.3.RELEASE</spring-boot.version>
 
-        <spring-boot-commons.version>2.0.1</spring-boot-commons.version>
-        <spring-boot-test-support.version>2.0.1</spring-boot-test-support.version>
+        <spring-boot-commons.version>2.0.2</spring-boot-commons.version>
+        <spring-boot-test-support.version>2.0.2</spring-boot-test-support.version>
 
         <testcontainers.version>1.8.3</testcontainers.version>
     </properties>
