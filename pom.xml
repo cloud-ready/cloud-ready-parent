@@ -9,7 +9,7 @@
     <parent>
         <artifactId>build-docker</artifactId>
         <groupId>cn.home1</groupId>
-        <version>0.3.6</version>
+        <version>0.3.7</version>
     </parent>
     <version>1.0.2.U5</version>
 
