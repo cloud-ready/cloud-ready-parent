@@ -11,7 +11,7 @@
         <groupId>cn.home1</groupId>
         <version>0.3.7</version>
     </parent>
-    <version>1.0.2.U5</version>
+    <version>1.0.2.U6</version>
 
     <!-- @formatter:off -->
     <dependencies>
@@ -92,7 +92,7 @@
 
     <properties>
         <deps-spring-boot.version>0.2.3</deps-spring-boot.version>
-        <log-config.version>0.1.2</log-config.version>
+        <log-config.version>0.2.0</log-config.version>
         <spring-boot.version>1.5.12.RELEASE</spring-boot.version>
 
         <spring-boot-commons.version>1.0.2.U5</spring-boot-commons.version>
