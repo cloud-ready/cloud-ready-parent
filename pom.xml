@@ -46,7 +46,10 @@
                 <version>${testcontainers.version}</version>
             </dependency>
 
-            <!--<dependency><groupId>cn.home1</groupId><artifactId>logback-logstash-config</artifactId><version>${log-config.version}</version></dependency>-->
+            <dependency><groupId>cn.home1</groupId><artifactId>log4j2-rolling-config</artifactId><version>${log-config.version}</version></dependency>
+            <dependency><groupId>cn.home1</groupId><artifactId>log4j2-test-config</artifactId><version>${log-config.version}</version><scope>test</scope></dependency>
+            <dependency><groupId>cn.home1</groupId><artifactId>logback-gelf-config</artifactId><version>${log-config.version}</version></dependency>
+            <dependency><groupId>cn.home1</groupId><artifactId>logback-logstash-config</artifactId><version>${log-config.version}</version></dependency>
             <dependency><groupId>cn.home1</groupId><artifactId>logback-test-config</artifactId><version>${log-config.version}</version><scope>test</scope></dependency>
 
             <dependency><groupId>top.infra</groupId><artifactId>spring-boot-commons</artifactId><version>${spring-boot-commons.version}</version></dependency>
