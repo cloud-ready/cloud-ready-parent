@@ -52,6 +52,9 @@
             <dependency><groupId>cn.home1</groupId><artifactId>logback-logstash-config</artifactId><version>${log-config.version}</version></dependency>
             <dependency><groupId>cn.home1</groupId><artifactId>logback-test-config</artifactId><version>${log-config.version}</version><scope>test</scope></dependency>
 
+            <dependency><groupId>de.codecentric</groupId><artifactId>spring-boot-admin-starter-client</artifactId><version>${spring.boot.admin.version}</version></dependency>
+            <dependency><groupId>de.codecentric</groupId><artifactId>spring-boot-admin-starter-server</artifactId><version>${spring.boot.admin.version}</version></dependency>
+
             <dependency><groupId>top.infra</groupId><artifactId>spring-boot-commons</artifactId><version>${spring-boot-commons.version}</version></dependency>
             <dependency><groupId>top.infra</groupId><artifactId>spring-boot-test-support</artifactId><version>${spring-boot-test-support.version}</version></dependency>
         </dependencies>
@@ -102,6 +105,7 @@
         <log-config.version>1.0.1-SNAPSHOT</log-config.version>
         <spring-boot.version>2.1.3.RELEASE</spring-boot.version>
 
+        <spring.boot.admin.version>2.1.4</spring.boot.admin.version>
         <spring-boot-commons.version>2.0.4-SNAPSHOT</spring-boot-commons.version>
         <spring-boot-test-support.version>2.0.4-SNAPSHOT</spring-boot-test-support.version>
 
