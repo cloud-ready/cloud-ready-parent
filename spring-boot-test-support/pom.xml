@@ -7,7 +7,7 @@
     <packaging>jar</packaging>
     <parent>
         <artifactId>cloud-ready-parent</artifactId>
-        <groupId>top.infra</groupId>
+        <groupId>top.infra.cloud-ready</groupId>
         <version>3.0.2-SNAPSHOT</version>
     </parent>
 
