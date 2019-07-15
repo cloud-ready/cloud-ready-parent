@@ -110,8 +110,8 @@
         <version.spring-boot>2.1.3.RELEASE</version.spring-boot>
 
         <version.spring.boot.admin>2.1.4</version.spring.boot.admin>
-        <version.spring-boot-commons>3.0.0-SNAPSHOT</version.spring-boot-commons>
-        <version.spring-boot-test-support>3.0.0-SNAPSHOT</version.spring-boot-test-support>
+        <version.spring-boot-commons>3.0.1-SNAPSHOT</version.spring-boot-commons>
+        <version.spring-boot-test-support>3.0.1-SNAPSHOT</version.spring-boot-test-support>
 
         <version.testcontainers>1.8.3</version.testcontainers>
     </properties>
