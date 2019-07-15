@@ -4,7 +4,7 @@ import static lombok.AccessLevel.PRIVATE;
 
 import lombok.NoArgsConstructor;
 
-import org.springframework.boot.test.util.EnvironmentTestUtils;
+import org.springframework.boot.test.util.TestPropertyValues;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.testcontainers.containers.GenericContainer;
 
@@ -18,16 +18,17 @@ public final class InitializerCallbacks {
         final int mappedPort = container.getMappedPort(6379);
 
         // spring-boot 1.5.x
-        EnvironmentTestUtils.addEnvironment("testcontainers", applicationContext.getEnvironment(), //
-            "spring.redis.host=" + containerIpAddress, //
-            "spring.redis.port=" + mappedPort
+        // org.springframework.boot.test.util.EnvironmentTestUtils.addEnvironment("testcontainers", applicationContext.getEnvironment(), //
+        //     "spring.redis.host=" + containerIpAddress, //
+        //     "spring.redis.port=" + mappedPort
+        // );
+
+        // spring-boot 2.x
+        TestPropertyValues values = TestPropertyValues.of(
+           "spring.redis.host=" + containerIpAddress,
+           "spring.redis.port=" + mappedPort
         );
-        // spring-boot 2.0.x
-        //TestPropertyValues values = TestPropertyValues.of(
-        //    "spring.redis.host=" + redis.getContainerIpAddress(),
-        //    "spring.redis.port=" + redis.getMappedPort(6379)
-        //);
-        //values.applyTo(configurableApplicationContext);
+        values.applyTo(applicationContext);
 
         return null;
     };

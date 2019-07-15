@@ -26,3 +26,11 @@ Commons library for spring-boot applications.
 ## spring-boot-test-support
 
 Utils, Rules, Components for testing spring-boot applications.
+
+## Build this project
+
+```bash
+JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home" mvn clean package spotbugs:spotbugs spotbugs:check
+
+JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home" mvn help:active-profiles clean install
+```

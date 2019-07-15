@@ -8,7 +8,7 @@
     <parent>
         <artifactId>cloud-ready-parent</artifactId>
         <groupId>top.infra</groupId>
-        <version>2.0.3</version>
+        <version>3.0.0</version>
     </parent>
 
     <!-- @formatter:off -->
@@ -33,5 +33,8 @@
     </dependencyManagement>
 
     <properties>
+        <java.version>8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 </project>
