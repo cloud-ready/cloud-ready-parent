@@ -3,7 +3,7 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <artifactId>cloud-ready-parent</artifactId>
-    <groupId>top.infra</groupId>
+    <groupId>top.infra.cloud-ready</groupId>
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <parent>
@@ -11,7 +11,7 @@
         <groupId>cn.home1</groupId>
         <version>3.0.2</version>
     </parent>
-    <version>3.0.1</version>
+    <version>3.0.2</version>
 
     <!-- @formatter:off -->
     <dependencies>
@@ -24,7 +24,7 @@
         <dependency><groupId>org.apache.commons</groupId><artifactId>commons-lang3</artifactId></dependency>
         <dependency><groupId>org.projectlombok</groupId><artifactId>lombok</artifactId><scope>provided</scope></dependency>
 
-        <dependency><groupId>cn.home1</groupId><artifactId>logback-test-config</artifactId><scope>test</scope></dependency>
+        <dependency><groupId>cn.home1.log-config</groupId><artifactId>logback-test-config</artifactId><scope>test</scope></dependency>
     </dependencies>
     <!-- @formatter:on -->
 
@@ -46,17 +46,17 @@
                 <version>${version.testcontainers}</version>
             </dependency>
 
-            <dependency><groupId>cn.home1</groupId><artifactId>log4j2-rolling-config</artifactId><version>${version.log-config}</version></dependency>
-            <dependency><groupId>cn.home1</groupId><artifactId>log4j2-test-config</artifactId><version>${version.log-config}</version><scope>test</scope></dependency>
-            <dependency><groupId>cn.home1</groupId><artifactId>logback-gelf-config</artifactId><version>${version.log-config}</version></dependency>
-            <dependency><groupId>cn.home1</groupId><artifactId>logback-logstash-config</artifactId><version>${version.log-config}</version></dependency>
-            <dependency><groupId>cn.home1</groupId><artifactId>logback-test-config</artifactId><version>${version.log-config}</version><scope>test</scope></dependency>
+            <dependency><groupId>cn.home1.log-config</groupId><artifactId>log4j2-rolling-config</artifactId><version>${version.log-config}</version></dependency>
+            <dependency><groupId>cn.home1.log-config</groupId><artifactId>log4j2-test-config</artifactId><version>${version.log-config}</version><scope>test</scope></dependency>
+            <dependency><groupId>cn.home1.log-config</groupId><artifactId>logback-gelf-config</artifactId><version>${version.log-config}</version></dependency>
+            <dependency><groupId>cn.home1.log-config</groupId><artifactId>logback-logstash-config</artifactId><version>${version.log-config}</version></dependency>
+            <dependency><groupId>cn.home1.log-config</groupId><artifactId>logback-test-config</artifactId><version>${version.log-config}</version><scope>test</scope></dependency>
 
             <dependency><groupId>de.codecentric</groupId><artifactId>spring-boot-admin-starter-client</artifactId><version>${version.spring.boot.admin}</version></dependency>
             <dependency><groupId>de.codecentric</groupId><artifactId>spring-boot-admin-starter-server</artifactId><version>${version.spring.boot.admin}</version></dependency>
 
-            <dependency><groupId>top.infra</groupId><artifactId>spring-boot-commons</artifactId><version>${version.spring-boot-commons}</version></dependency>
-            <dependency><groupId>top.infra</groupId><artifactId>spring-boot-test-support</artifactId><version>${version.spring-boot-test-support}</version></dependency>
+            <dependency><groupId>top.infra.cloud-ready</groupId><artifactId>spring-boot-commons</artifactId><version>${version.spring-boot-commons}</version></dependency>
+            <dependency><groupId>top.infra.cloud-ready</groupId><artifactId>spring-boot-test-support</artifactId><version>${version.spring-boot-test-support}</version></dependency>
         </dependencies>
         <!-- @formatter:on -->
     </dependencyManagement>
@@ -106,12 +106,12 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <version.deps-spring-boot>3.0.1</version.deps-spring-boot>
-        <version.log-config>3.0.1</version.log-config>
+        <version.log-config>3.0.2</version.log-config>
         <version.spring-boot>2.1.3.RELEASE</version.spring-boot>
 
         <version.spring.boot.admin>2.1.4</version.spring.boot.admin>
-        <version.spring-boot-commons>3.0.1</version.spring-boot-commons>
-        <version.spring-boot-test-support>3.0.1</version.spring-boot-test-support>
+        <version.spring-boot-commons>3.0.2</version.spring-boot-commons>
+        <version.spring-boot-test-support>3.0.2</version.spring-boot-test-support>
 
         <version.testcontainers>1.8.3</version.testcontainers>
     </properties>
