@@ -17,6 +17,6 @@ Maven:
 <dependency>
     <groupId>top.infra.cloud-ready</groupId>
     <artifactId>spring-boot-commons</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>3.0.2</version>
 </dependency>
 ```
