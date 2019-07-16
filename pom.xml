@@ -9,7 +9,7 @@
     <parent>
         <artifactId>maven-build</artifactId>
         <groupId>cn.home1</groupId>
-        <version>3.0.2</version>
+        <version>3.0.3</version>
     </parent>
     <version>3.0.3-SNAPSHOT</version>
 
