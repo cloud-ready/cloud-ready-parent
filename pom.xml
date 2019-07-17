@@ -11,7 +11,7 @@
         <groupId>cn.home1</groupId>
         <version>3.0.4</version>
     </parent>
-    <version>3.0.4-SNAPSHOT</version>
+    <version>3.0.4</version>
 
     <!-- @formatter:off -->
     <dependencies>
